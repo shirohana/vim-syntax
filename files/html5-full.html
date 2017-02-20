@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache" lang="zh-Hant">
+<head>
+<!--
+    ┌───────────┐
+#   │ Meta Info │
+    └───────────┘
+-->
+  <meta charset="utf-8">
+  <title>HTML5 syntax sample</title>
+
+  <base href="base.html" target="_blank" target="_parent" target="_self" target="_top">
+
+  <meta charset="UTF-8" >
+  <meta name="application-name" content="Application Name">
+  <meta name="author" content="Hana Shiro">
+  <meta name="description" content="HTML5 syntax highlighe checker for vim">
+  <meta name="generator" content="none">
+  <meta name="keywords" content="vim html html5 syntax">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="default-style" content="style-default.css">
+  <meta http-equiv="refresh" content="3600">
+</head>
+
+<!--
+    ┌─────────────────────────┐
+#   │ Window Event Attributes │
+    └─────────────────────────┘
+-->
+
+<body
+  onafterprint="script()"
+  onbeforeprint="script()"
+  onbeforeunload="script()"
+  onerror="script()"
+  onhashchange="script()"
+  onload="script()"
+  onmessage="script()"
+  onoffline="script()"
+  ononline="script()"
+  onpagehide="script()"
+  onpageshow="script()"
+  onpopstate="script()"
+  onresize="script()"
+  onstorage="script()"
+  onunload="script()" >
+
+<!--
+    ┌───────────────────┐
+#   │ Global Attributes │
+    └───────────────────┘
+-->
+
+  <!-- Global attributes -->
+  <p accesskey="p"
+   class="foo-bar a-z_0-9_A-Z_"
+   dir="ltr" dir="rtl" dir="auto"
+   id="unique"
+   style="color:white;text-align:center"
+   tabindex="-1"
+   title="Text" >
+   A paragraph with global attributes
+ </p>
+
+ <!-- hTML5 only global attributes -->
+  <p contenteditable="true" contenteditable="false"
+    data-foo="somevalue" data-a="Valid" data-*="Valid" data-A="Invalid"
+    draggable="true" draggable="false" draggable="auto"
+    hidden >
+    A paragraph with html5 only global attributes
+  </p>
+
+  <!-- Unsupported HTML5 only global attributes -->
+  <p contextmenu="menu_id"
+    dropzone="copy" dropzone="move" dropzone="link"
+    translate="yes" translate="no" >
+    A paragraph with rarely supported html5 global attributes
+  </p>
+
+<!--
+    ┌─────────────┐
+#   │ Form Events │
+    └─────────────┘
+-->
+
+  <form onsubmit="script()" ></form>
+
+  <input
+    onblur="script()"
+    onchange="script()"
+    oncontextmenu="script()"
+    onfocus="script()"
+    oninput="script()"
+    oninvalid="script()"
+    onreset="script()"
+    onsearch="script()"
+    onselect="script()">
+
+<!--
+    ┌─────────────────┐
+#   │ Keyboard Events │
+    └─────────────────┘
+-->
+
+  <input
+    onkeydown="script()"
+    onkeypress="script()"
+    onkeyup="()" >
+
+<!--
+    ┌──────────────┐
+#   │ Mouse Events │
+    └──────────────┘
+-->
+
+  <button
+    onclick="script()"
+    ondbclick="script()"
+    onmousedown="script()"
+    onmousemove="script()"
+    onmouseout="script()"
+    onmouseover="script()"
+    onmouseup="script()"
+    onwheel="script()"
+  ></button>
+
+<!--
+    ┌─────────────┐
+#   │ Drag Events │
+    └─────────────┘
+-->
+
+  <img
+    ondrag="script()"
+    ondragend="script()"
+    ondragenter="script()"
+    ondragleave="script()"
+    ondragover="script()"
+    ondragstart="script()"
+    ondrop="script()"
+    onscroll="script()" >
+
+<!--
+    ┌──────────────────┐
+#   │ Clipboard Events │
+    └──────────────────┘
+-->
+
+  <textarea
+    oncopy="script()"
+    oncut="script()"
+    onpaste="script()"
+  ></textarea>
+
+<!--
+    ┌──────────────┐
+#   │ Media Events │
+    └──────────────┘
+-->
+
+  <object
+    onabort="script()"
+    oncanplay="script()"
+    oncanplaythrough="script()"
+    ondurationchange="script()"
+    onemptied="script()"
+    onended="script()"
+    onerror="script()"
+    onloadeddata="script()"
+    onloadedmetadata="script()"
+    onloadstart="script()"
+    onpause="script()"
+    onplay="script()"
+    onplaying="script()"
+    onprogress="script()"
+    onratechange="script()"
+    onseeked="script()"
+    onseeking="script()"
+    onstalled="script()"
+    onsuspend="script()"
+    ontimeupdate="script()"
+    onvolumechange="script()"
+    onwaiting="script()"
+  >
+  </object>
+
+  <audio>
+    <track oncuechange="script()" ></track>
+  </audio>
+
+<!--
+    ┌─────────────┐
+#   │ Misc Events │
+    └─────────────┘
+-->
+
+  <menu onshow="script()" ></menu>
+  <details ontoggle="script()" ></details>
+
+<!--
+    ┌────────────┐
+#   │ New Syntax │
+    └────────────┘
+-->
+
+  <p id class >Empty attribute</p>
+  <p id=uniquediv class=text-centered >Unquoted attribute</p>
+  <p id='uniquediv' class='text-centered' >single-quoted attribute</p>
+
+<!--
+    ┌────────────┐
+#   │ Basic HTML │
+    └────────────┘
+-->
+
+  <!-- @hn Defines HTML headings -->
+  <h1>This is heading 1</h1>
+  <h2>This is heading 2</h2>
+  <h3>This is heading 3</h3>
+  <h4>This is heading 4</h4>
+  <h5>This is heading 5</h5>
+  <h6>This is heading 6</h6>
+
+  <!-- @p Defines a paragraph -->
+  <p>This is some text in a paragraph.</p>
+
+  <!-- @br Inserts a single line break -->
+  <br>
+
+  <!-- @hr Defines a thematic change in the content -->
+  <hr>
+
+<!--
+    ┌────────────┐
+#   │ Formatting │
+    └────────────┘
+-->
+
+  <!-- @abbr Defines an abbreviation or an acronym -->
+  <abbr title="World Health Organization">WHO</abbr>
+
+  <!-- @address Defines contact information for the author/owner of a document/article -->
+  <address>
+    Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+  </address>
+
+  <!-- @b Defines bold text -->
+  <b>This is bold text</b>
+
+  <!-- @bdi Isolates a part of text that might be formatted in a different direction from other text outside it -->
+  <bdi>hrefs</bdi>
+  <bdi>jdoe</bdi>
+  <bdi>إيان</bdi>
+
+  <!-- @bdo Overrides the current text direction -->
+  <bdo dir="ltr" >This text will go left-to-right.</bdo>
+  <bdo dir="rtl" >This text will go right-to-left.</bdo>
+
+  <!-- @blockquote Defines a section that is quoted from another source -->
+  <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    For 50 years, WWF has been protecting the future of nature...
+  </blockquote>
+
+  <!-- @cite Defines the title of a work -->
+  <cite>The Scream</cite>
+
+  <!-- @code Defines a piece of computer code -->
+  <code>
+    <em>Renders as emphasized text</em>
+    <strong>Defines important text</strong>
+    <code>Defines a piece of computer code</code>
+    <samp>Defines sample output from a computer program</samp>
+    <kbd>Defines keyboard input</kbd>
+    <var>Defines a variable</var>
+  </code>
+
+  <!-- @del Defines text that has been deleted from a document -->
+  <del cite="del_demo_cite.htm" datetime="2015-11-15T22:55:03Z" >blue</del>
+
+  <!-- @dfn Represents the defining instance of a term -->
+  <dfn title="HyperText Markup Language" >HTML</dfn>
+
+  <!-- @em Defines emphasized text -->
+  <em>Emphasized text</em>
+
+  <!-- @i Defines a part of text in an alternate voice or mood -->
+  <i>The lightning</i>
+
+  <!-- @ins Defines a text that has been inserted into a document -->
+  <ins cite="why_inserted.htm" datetime="2015-09-15T22:55:03Z" >red</ins>
+
+  <!-- @kbd Defines keyboard input -->
+  <kbd>Keyboard input</kbd>
+
+  <!-- @mark Defines marked/highlighted text -->
+  <mark>milk</mark>
+
+  <!-- @meter Defines a scalar measurement within a known range (a gauge) -->
+  <meter form="form1" min="0" low="40" high="90" max="100" value="95" >95 / 100</meter>
+
+  <!-- @pre Defines preformatted text -->
+  <pre>Text in a pre element is displayed... </pre>
+
+  <!-- @progress Represents the progress of a task -->
+  <progress value="22" max="100" ></progress>
+
+  <!-- @q Defines a short quotation -->
+  <q>Build a future where people live in harmony with nature.</q>
+
+  <!-- @rp Defines what to show in browsers that do not support ruby annotations -->
+  <!-- @rt Defines an explanation/pronunciation of characters (for East Asian typography) -->
+  <!-- @ruby Defines a ruby annotation (for East Asian typography) -->
+  <ruby>漢 <rt><rp>(</rp>ㄏㄢˋ<rp>)</rp></rt></ruby>
+
+  <!-- @s Defines text that is no longer correct -->
+  <s>My car is blue.</s>
+
+  <!-- @samp Defines sample output from a computer program -->
+  <samp>Sample output from a computer program</samp>
+
+  <!-- @small Defines smaller text -->
+  <small>Copyright 1999-2050 by Refsnes Data</small>
+
+  <!-- @strong Defines important text -->
+  <strong>Strong text</strong>
+
+  <!-- @sub Defines subscripted text -->
+  <sub>subscript</sub>
+
+  <!-- @sup Defines superscripted text -->
+  <sup>superscript</sup>
+
+  <!-- @time Defines a date/time -->
+  <time datetime="2008-02-14 20:00">Valentines day</time>
+
+  <!-- @u Defines text that should be stylistically different from normal text -->
+  <u>parragraph</u>
+
+  <!-- @var	Defines a variable -->
+  <var>Variable</var>
+
+  <!-- @wbr Defines a possible line-break -->
+  <wbr>
+
+<!--
+    ┌─────────────────┐
+#   │ Forms and Input │
+    └─────────────────┘
+-->
+
+  <!-- @form Defines an HTML form for user input -->
+  <form accept-charset="UTF-8"
+    action="/action_page.php"
+    autocomplete="on" autocomplete="off"
+    enctype="application/json" enctype="multipart/form-data"
+    method="get" method="post"
+    name="form_name"
+    novalidate
+    target="_blank" target="_self" target="_parent" target="_top"
+    ></form>
+
+  <!-- @input Defines an input control -->
+  <input
+    accept="file_extension" accept="audio/*" accept="video/*" accept="image/*" accept="media_type"
+    alt="text"
+    autocomplete="on" autocomplete="off"
+    autofocus
+    checked
+    dirname="inputname.dir"
+    disabled
+    form="form_id"
+    formaction="/action_page.php"
+    formenctype="application/json" enctype="multipart/form-data"
+    formmethod="get" formmethod="post"
+    formnovalidate
+    formtarget="_blank" formtarget="_self" formtarget="_parent" formtarget="_top"
+    height="100"
+    list="datalist_id"
+    max="2020-12-31" max="20"
+    max-length="524288"
+    min="1979-01-01" min="-20"
+    multiple
+    name="inputname"
+    pattern="\d{4}-\d{3}-\d{3}"
+    placeholder="Place holder"
+    readonly
+    required
+    size="20"
+    spellcheck="true" spellcheck="false"
+    src="http://shirohana.me/submit.gif"
+    step="1"
+    type="button" type="checkbox" type="color" type="date" type="datetime-local" type="email"
+    type="file" type="hidden" type="image" type="month" type="number" type="password" type="radio"
+    type="range" type="reset" type="search" type="submit" type="tel" type="text" type="time"
+    type="url" type="week"
+    value="text"
+    width="100"
+  >
+
+  <!-- @textarea Defines a multiline input control (text area) -->
+  <textarea
+    autofocus
+    cols="32"
+    dirname="textareaname.dir"
+    disabled
+    form="form_id"
+    max-length="140"
+    name="textareaname"
+    placeholder="Place holder"
+    readonly
+    required
+    rows="4"
+    spellcheck="true" spellcheck="false"
+    wrap="hard" wrap="soft"
+    >Hello, world!
+  </textarea>
+
+  <!-- @button Defines a clickable button -->
+  <button
+    autofocus
+    disabled
+    form="form_id"
+    formaction="/action_page.php"
+    formenctype="application/json" formenctype="multipart/form-data"
+    formmethod="get" formmethod="post"
+    formnovalidate
+    formtarget="_blank" formtarget="_self" formtarget="_parent" formtarget="_top"
+    name="buttonname"
+    type="button" type="reset" type="submit"
+    value="text"
+    >Button
+  </button>
+
+  <!-- @select Defines a drop-down list -->
+  <select
+    autofocus
+    disabled
+    form="form_id"
+    multiple
+    name="selectname"
+    required
+    size="8"
+    >
+  </select>
+
+  <!-- @optgroup Defines a group of related options in a drop-down list -->
+  <select>
+    <optgroup disabled label="text">
+    </optgroup>
+  </select>
+
+  <!-- @option Defines an option in a drop-down list -->
+  <select>
+    <option disabled label="text" selected value="1">Option 1</option>
+    <option disabled label="text" selected value="2">Option 2</option>
+  </select>
+
+  <!-- @label Defines a label for an <input> element -->
+  <label for="element_id" form="form_id">Label: </label>
+
+  <!-- @fieldset Groups related elements in a form -->
+  <!-- @legend Defines a caption for a <fieldset> element -->
+  <fieldset disabled form="form_id" name="fieldsetname">
+    <legend>Legend</legend>
+  </fieldset>
+
+  <!-- @datalist Specifies a list of pre-defined options for input controls -->
+  <datalist>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </datalist>
+
+  <!-- @keygen Defines a key-pair generator field (for forms) -->
+  <keygen
+    autofocus
+    challenge
+    disabled
+    form="form_id"
+    keytype="rsa" keytype="dsa" keytype="ec"
+    name="keygenname"
+  >
+
+  <!-- @output Defines the result of a calculation -->
+  <output for="element_id" form="form_id" name="outputname"></output>
+
+<!--
+    ┌────────┐
+#   │ Frames │
+    └────────┘
+-->
+
+  <!-- @iframe Defines an inline frame -->
+  <iframe
+    height="100"
+    name="iframename"
+    sandbox sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts"
+    sandbox="allow-top-navigation"
+    src="/iframe1.htm"
+    srcdoc="<p>Hello world!</p>"
+    width="100" >
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+
+<!--
+    ┌────────┐
+#   │ Images │
+    └────────┘
+-->
+
+  <!-- @img Defines an image -->
+  <img
+    alt="text"
+    crossorigin="anonymous" crossorigin="use-credentials"
+    height="100"
+    ismap
+    longdesc="string"
+    sizes="(min-width: 1080px) calc(.333 * 100vw), (min-width: 768px) calc(.5 * 100vw)"
+    src="image.png"
+    srcset="image-2x.png 128w, image-4x.png 256w"
+    usemap="#mapname"
+    width="100" >
+
+  <!-- @map Defines a client-side image-map -->
+  <!-- @area Defines an area inside an image-map -->
+  <map name="mapname">
+    <area
+      alt="text"
+      coords="0, 0, 50, 50" coords="25, 75, 25" coords="100, 0, 100, 100, 0, 100"
+      download="filename.txt"
+      href="http://shirohana.me"
+      hreflang="zh-Hant"
+      media="screen and (min-width: 768px)"
+      rel="alternate" rel="author" rel="bookmark" rel="help" rel="license" rel="next"
+      rel="nofollow" rel="noreferrer" rel="prefetch" rel="prev" rel="swarch" rel="tag"
+      shape="default" shape="rect" shape="circle" shape="poly"
+      target="_blank" target="_parent" target="_self" target="_top"
+      type="media_type"
+    >
+  </map>
+
+  <!-- @canvas Used to draw graphics, on the fly, via scripting (usually JavaScript) -->
+  <canvas height="100" width="100" ></canvas>
+
+  <!-- @figure Specifies self-contained content -->
+  <!-- @figcaption Defines a caption for a <figure> element -->
+  <figure>
+    <figcaption>Fig1.</figcaption>
+  </figure>
+
+  <!-- @picture Defines a container for multiple image resources -->
+  <picture></picture>
+
+  <!-- @svg svg examples from w3scholls -->
+  <svg height="130" width="500">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150" style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+    Sorry, your browser does not support inline SVG.
+  </svg>
+
+<!--
+    ┌───────────────┐
+#   │ Audio / Video │
+    └───────────────┘
+-->
+
+  <!-- @audio Defines sound content -->
+  <audio
+    autoplay
+    controls
+    loop
+    muted
+    preload="auto" preload="metadata" preload="none"
+    src="http://example.com/assets/audio_0.mp3" >
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- @source Defines multiple media resources for media elements (<video>, <audio> and <picture>) -->
+  <audio>
+    <source src="audio_0.mp3" type="MIME-type" >
+  </audio>
+  <picture>
+    <source
+      src="image.png"
+      srcset="image-2x.png 128w, image-4x.png 256w"
+      type="MIME-type"
+      media="screen and (min-width: 768px)" >
+  </picture>
+
+  <!-- @track Defines text tracks for media elements (<video> and <audio>) -->
+  <audio>
+    <track
+      default
+      kind="captions" kind="chapters" kind="descriptions" kind="metadata" kind="subtitles"
+      label="text"
+      src="http://example.com/audio_0.mp3"
+      srclang="zh-Hant" >
+  </audio>
+  <video>
+    <track
+      default
+      kind="captions" kind="chapters" kind="descriptions" kind="metadata" kind="subtitles"
+      label="text"
+      src="http://example.com/audio_0.mp3"
+      srclang="zh-Hant" >
+  </video>
+
+  <!-- @video Defines a video or movie -->
+  <video
+    autoplay
+    controls
+    height="100"
+    loop
+    muted
+    poster="/image.png"
+    preload="auto" preload="metadata" preload="none"
+    src="/video.mp4"
+    width="100" >
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
+<!--
+    ┌───────┐
+#   │ Links │
+    └───────┘
+-->
+
+  <!-- @a Defines a hyperlink -->
+  <a
+    download="filename.txt"
+    href="/filename.txt"
+    hreflang="zh-Hant"
+    media="screen and (min-width: 768px)"
+    rel="altername" rel="author" rel="bookmark" rel="external" rel="help" rel="license" rel="next"
+    rel="nofollow" rel="noreferrer" rel="noopener" rel="prev" rel="search" rel="tag"
+    target="_blank" taget="_parent" target="_self" target="_top"
+    type="media_type"
+    >Link!</a>
+
+  <!-- @link Defines the relationship between a document and an external resource (most used to link to style sheets) -->
+  <link
+    crossorigin="anonymous" crossorigin="use-credentials"
+    href="style.css"
+    hreflang="zh-Hant"
+    media="screen and (min-width: 768px)"
+    rel="alternate" rel="author" rel="dns-prefetch" rel="help" rel="icon" rel="license" rel="next"
+    rel="pingback" rel="preconnect" rel="prefetch" rel="preload" rel="prerender" rel="prev"
+    rel="search" rel="stylesheet"
+    sizes="16x16" sizes="any"
+    type="media_type" >
+
+  <!-- @nav Defines navigation links -->
+  <nav></nav>
+
+<!--
+    ┌───────┐
+#   │ Lists │
+    └───────┘
+-->
+
+  <!-- @ul Defines an unordered list -->
+  <ul></ul>
+
+  <!-- @ol Defines an ordered list -->
+  <ol reversed start="0" type="1" type="A" type="a" type="I" type="i"></ol>
+
+  <!-- @li Defines a list item -->
+  <ul><li>List item</li></ul>
+  <ol><li value="0">List item</li></ol>
+
+  <!-- @dl Defines a description list -->
+  <!-- @dt Defines a term/name in a description list -->
+  <!-- @dd Defines a description of a term/name in a description list -->
+  <dt></dt>
+  <dd></dd>
+  <dl>
+    <dt>Term</dt>
+    <dd>Description</dd>
+  </dl>
+
+  <!-- @menu Defines a list/menu of commands -->
+  <!-- @menuitem Defines a command/menu item that the user can invoke from a popup menu -->
+  <menuitem>
+  <menu label="text" type="list" type="toolbar" type="context">
+    <menuitem
+      checked
+      command="string"
+      default
+      disabled
+      icon="/icon.ico"
+      label="text"
+      radiogroup="groupname"
+      type="checkbox" type="command" type="radio" >
+  </menu>
+
+<!--
+    ┌────────┐
+#   │ Tables │
+    └────────┘
+-->
+
+  <!-- @table Defines a table -->
+  <table sortable></table>
+
+  <!-- @caption Defines a table caption -->
+  <caption>Caption outside of table</caption>
+  <table>
+    <caption>Caption</caption>
+  </table>
+
+  <!-- @th Defines a header cell in a table -->
+  <th>th outside of table and tr</th>
+  <table><th>th ourside of tr</th></table>
+  <table>
+    <tr>
+      <th
+        abbr="text"
+        colspan="2"
+        headers="header_id"
+        rowspan="2"
+        scope="col" scope="row" scope="colgroup" scope="rowgroup"
+        sorted="reversed" sorted="1" sorted="reversed 1" sorted="1 reversed"
+        >regular th</th>
+    </tr>
+  </table>
+
+  <!-- @td Defines a cell in a table -->
+  <td>td outside of table and tr</td>
+  <table><td>t outside of tr</td></table>
+  <table>
+    <tr>
+      <td colspan="2" headers="header_id" rowspan="2" >regular td</td>
+    </tr>
+  </table>
+
+  <!-- @thead Groups the header content in a table -->
+  <!-- @tbody Groups the body content in a table -->
+  <!-- @tfoot Groups the footer content in a table -->
+  <thead>thead outside of table</thead>
+  <table>
+    <thead>
+      <tr><th>THEAD</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>TBODY</td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td>TFOOT</td></tr>
+    </tfoot>
+  </table>
+
+  <!-- @colgroup Specifies a group of one or more columns in a table for formatting -->
+  <!-- @col Specifies column properties for each column within a <colgroup> element -->
+  <colgroup span="2"></colgroup>
+  <col span="2">
+  <table><col span="2"></table>
+  <colgroup span="2"><col span="2"></colgroup>
+  <table>
+    <colgroup span="2">
+      <col span="2">
+    </colgroup>
+  </table>
+
+<!--
+    ┌──────────────────────┐
+#   │ Styles and Semantics │
+    └──────────────────────┘
+-->
+
+  <!-- @style Defines style information for a document -->
+  <style media="screen and (min-width: 768px)" scoped type="text/css"></style>
+
+  <!-- @div Defines a section in a document -->
+  <div></div>
+
+  <!-- @span Defines a section in a document -->
+  <span></span>
+
+  <!-- @header Defines a header for a document or section -->
+  <header>header cannot be placed within a footer, address, or another header elelemt</header>
+  <footer><header>Syntax Error</header></footer>
+  <address><header>Syntax Error</header></address>
+  <header><header>Syntax Error</header></header>
+
+  <!-- @footer Defines a footer for a document or section -->
+  <footer>Authorship, copyright, contact, sitemap, back to top links, related documents</footer>
+
+  <!-- @main Specifies the main content of a document -->
+  <main>
+    Main element should be unique to the document<br>
+    Main elementmust not be a descendant of an article, aside, footer, header, or nav element
+  </main>
+  <article><main>Syntax Error</main></article>
+  <aside><main>Syntax Error</main></aside>
+  <footer><main>Syntax Error</main></footer>
+  <header><main>Syntax Error</main></header>
+  <nav><main>Syntax Error</main></nav>
+
+  <!-- @section Defines a section in a document -->
+  <section>Section</section>
+
+  <!-- @article Defines an article -->
+  <article>Article</article>
+
+  <!-- @aside Defines content aside from the page content -->
+  <aside>Aside</aside>
+
+  <!-- @details Defines additional details that the user can view or hide -->
+  <details open>Details</details>
+
+  <!-- @dialog Defines a dialog box or window -->
+  <dialog open>Dialog</dialog>
+
+  <!-- @summary Defines a visible heading for a <details> element -->
+  <summary>Illegal summary</summary>
+  <details><summary>Summary</summary></details>
+
+  <!-- @data Links the given content with a machine-readable translation -->
+  <data value="1">One</data>
+
+<!--
+    ┌─────────────┐
+#   │ Programming │
+    └─────────────┘
+-->
+
+  <!-- @script Defines a client-side script -->
+  <script async charset="utf-8" defer src="/main.js" type="text/javascript"></script>
+
+  <!-- @noscript Defines an alternate content for users that do not support client-side scripts -->
+  <noscript>Your browser does not support JavaScript!</noscript>
+
+  <!-- @embed Defines a container for an external (non-HTML) application -->
+  <embed height="100" src="helloworld.swf" type="media_type" width="100">
+
+  <!-- @object Defines an embedded object -->
+  <object
+    data="helloworld.swf"
+    form="form_id"
+    height="100"
+    name="objectname"
+    type="media_type"
+    usemap="#mapname"
+    width="100" ></object>
+
+  <!-- @param Defines a parameter for an object -->
+  <param name="invalid" value="true">
+  <object>
+    <param name="autoplay" value="true">
+  </object>
+
+</body>
+</html>
